@@ -39,9 +39,9 @@ case "$1" in
     ;;
   update)
     platform=$(uname -s)
-    if [ $(expr substr "$platform" 1 9) = "CYGWIN_NT" ] || \
-      [ $(expr substr "$platform" 1 10) = "MINGW32_NT" ] || \
-      [ $(expr substr "$platform" 1 10) = "MINGW64_NT" ]
+    if [ "$(expr substr "$platform" 1 9)" = "CYGWIN_NT" ] || \
+      [ "$(expr substr "$platform" 1 10)" = "MINGW32_NT" ] || \
+      [ "$(expr substr "$platform" 1 10)" = "MINGW64_NT" ]
     then
       updateForWindows
     else
